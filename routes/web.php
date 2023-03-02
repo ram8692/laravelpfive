@@ -24,6 +24,9 @@ Route::prefix('admin')->group(function(){
     
     Route::get('/dashboard',[AdminController::class,'dashboard'])->name('admin.dashboard')->middleware('admin');
     Route::get('/admin/logout',[AdminController::class,'AdminLogout'])->name('admin.logout');
+    Route::get('/register',[AdminController::class,'AdminRegister'])->name('register_from');
+
+    Route::post('/register/create',[AdminController::class,'AdminRegisterCreate'])->name('admin.register.create');
 });
 
 
