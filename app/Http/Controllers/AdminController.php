@@ -18,11 +18,10 @@ class AdminController extends Controller
     public function login(Request $request){
         $check = $request->all();
 
-        if(Auth::guard('admin')->attempt(['email'=>$check['email'],'password'=>$check['pasword']])){
+        if(Auth::guard('admin')->attempt(['email'=>$check['email'],'password'=>$check['password']])){
             return redirect()->route('admin.dashboard')->with('error','admin login successfully');
         }else{
-            return redirect()->route('admin.login')->with('error','admin login successfully');
+            return redirect()->route('login_from')->with('error','invalid');
         }
-
     }
 }

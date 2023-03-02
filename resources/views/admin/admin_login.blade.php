@@ -49,8 +49,8 @@
 @endif
 
 
-                            <form action="{{route('admin.login')}}" class="d-block" method="post">
-                                @csrf
+                            <form action="{{route('admin.login')}}" class="d-block" method="post"> 
+                                @csrf 
                                 <div class="form-group icon_parent">
                                      <label for="password">Email</label>
          <input type="email" class="form-control"  name="email" placeholder="Email Address">
