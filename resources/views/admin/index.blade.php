@@ -289,7 +289,7 @@
                     </span> Password Change </a>
                 </li>
                 <li>
-                  <a href=" ">
+                  <a href="{{route('admin.logout')}}">
                     <span>
                       <i class="fas fa-unlock-alt"></i>
                     </span> Logout </a>

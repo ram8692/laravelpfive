@@ -24,4 +24,10 @@ class AdminController extends Controller
             return redirect()->route('login_from')->with('error','invalid');
         }
     }
+
+    public function AdminLogout(){
+        Auth::guard('admin')->logout();
+        return redirect()->route('login_from')->with('error','you have logged out successfully');
+
+    }
 }
